@@ -2,9 +2,9 @@
 :root {
     --primary-color: #243119;
     --secondary-color: #666;
-    --background-color: #f0f7fa;
+    --background-color: #CACBD2;
     --container-background: white;
-    --link-color: #c0392b;
+    --link-color: #5B5D6A;
     --link-hover-color: #e74c3c;
     --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.08);
     --shadow-image: 0 4px 12px rgba(0, 0, 0, 0.06);
