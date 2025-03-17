@@ -1,15 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonnet 18 - Shakespeare</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .home-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--link-color);
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: var(--transition-default);
+            display: flex;
+            align-items: center;
+            width: fit-content;
+        }
+        
+        .home-link:before {
+            content: "←";
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+        
+        .home-link:hover {
+            color: var(--link-hover-color);
+            transform: translateX(-3px);
+        }
+    </style>
 </head>
 <body>
     <main class="container">
+        <a href="index.html" class="home-link">Retour à l'accueil</a>
+        
         <header>
-            	<a name= "haut"></a><h1>Sonnet 18</h1>
+            <a name="haut"></a><h1>Sonnet 18</h1>
             <h2>by William Shakespeare (1564-1616)</h2>
         </header>
         
