@@ -1,78 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bibliographie - Portfolio Web Kenji</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+
 </head>
+
 <body>
-  <main class="container bibliographie-page">
+    <main class="container bibliographie-page">
         <a href="index.html" class="home-link">Retour à l'accueil</a>
         <h1>Bibliographie</h1>
         <p>Voici les sources utilisées pour ce projet, avec une explication de leur utilisation :</p>
-        
+
         <h2>Sources et explications</h2>
         <ul>
-            <li><strong>W3Schools (Navigation, CSS, Scroll)</strong><br>
-                W3Schools a été utilisé pour comprendre et implémenter un menu de navigation ainsi qu'un bouton de retour en haut de page.
+            <li><strong>W3Schools (Navigation, CSS, Scroll)</strong>
+                <br> W3Schools a été utilisé pour comprendre et implémenter un menu de navigation ainsi qu'un bouton de retour en haut de page.
                 <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Source</a>,
                 <a href="https://www.w3schools.com/css/css_navbar.asp">Source</a>,
                 <a href="https://www.w3schools.com/howto/howto_js_scroll_to_top.asp">Source</a>
             </li>
-            <li><strong>Stack Overflow (Retour en haut CSS/HTML)</strong><br>
-                Stack Overflow a aidé à trouver une solution pour créer un bouton de retour en haut de page uniquement en CSS et HTML.
+            <li><strong>Stack Overflow (Retour en haut CSS/HTML)</strong>
+                <br> Stack Overflow a aidé à trouver une solution pour créer un bouton de retour en haut de page uniquement en CSS et HTML.
                 <a href="https://stackoverflow.com/questions/32102747/how-to-make-a-back-to-top-button-using-css-and-html-only">Source</a>
             </li>
-            <li><strong>Poetry Foundation (Sonnet 18)</strong><br>
-                Cette source a fourni le texte original du poème "Sonnet 18" de Shakespeare utilisé dans l'analyse.
+            <li><strong>Poetry Foundation (Sonnet 18)</strong>
+                <br> Cette source a fourni le texte original du poème "Sonnet 18" de Shakespeare utilisé dans l'analyse.
                 <a href="https://www.poetryfoundation.org/poems/45087/sonnet-18-shall-i-compare-thee-to-a-summers-day">Source</a>
             </li>
-            <li><strong>Byron's Muse (Analyse et image)</strong><br>
-                Ce blog a été utilisé pour obtenir une analyse du poème ainsi qu'une image illustrant le thème du sonnet.
-                <a href="https://byronsmuse.wordpress.com/2015/05/23/william-shakespeare-sonnet-xviii/">Source</a>
+            <li><strong>Byron's Muse (Analyse et image)</strong>
+                <br> C'est sur ce blog que j'ai trouvé le poème ainsi qu'une image illustrant le thème du sonnet. <a href="https://byronsmuse.wordpress.com/2015/05/23/william-shakespeare-sonnet-xviii/">Source</a>
             </li>
-            <li><strong>Mozilla Developer Network (Meta Viewport)</strong><br>
-                Utilisé pour apprendre comment configurer la balise meta viewport afin d'améliorer l'affichage sur mobile.
+            <li><strong>Mozilla Developer Network (Meta Viewport)</strong>
+                <br> Utilisé pour apprendre comment configurer la balise meta viewport afin d'améliorer l'affichage sur mobile.
                 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag">Source</a>
             </li>
-            <li><strong>W3Schools (HTML de base)</strong><br>
-                Référence pour les bases du HTML et de la structuration des pages web.
+            <li><strong>W3Schools (HTML de base)</strong>
+                <br> Référence pour les bases du HTML et de la structuration des pages web.
                 <a href="https://www.w3schools.com/html/">Source</a>
             </li>
-            <li><strong>YouTube (Développement Web Moderne)</strong><br>
-                Une vidéo informative sur le développement web moderne et minimaliste.
+            <li><strong>YouTube (Développement Web Moderne)</strong>
+                <br> Une vidéo informative sur le développement web moderne et minimaliste.
                 <a href="https://www.youtube.com/watch?v=tzaHrMx1ncc&pp=ygUUI3NpbXBsZXdlYmRldm9scG1lbnQ%3D">Source</a>
             </li>
-            <li><strong>CodeMentor (Minimalisme Web)</strong><br>
-                Un article expliquant les principes du développement web minimaliste et HTML simplifié.
-                <a href="https://www.codementor.io/@adamrmoss/modern-minimalist-web-development-part-1-html-over-http-29yxmkwgp3">Source</a>
+            <li><strong>CodeMentor (Minimalisme Web)</strong>
+                <br> Cet article m'a aidé en expliquant les principes du développement web minimaliste et du HTML simplifié. <a href="https://www.codementor.io/@adamrmoss/modern-minimalist-web-development-part-1-html-over-http-29yxmkwgp3">Source</a>
+            </li>
+            <li><strong>Code Beautify (HTML Cleaner)</strong>
+                <br> Ce site m'a aidé à nettoyer le codage html..
+                <a href="https://codebeautify.org/html-cleaner">Source</a>
             </li>
         </ul>
-    </div>
-     <!-- Bouton retour en haut de page -->
-    <a href="#" class="back-to-top" id="back-to-top" aria-label="Retour en haut">↑</a>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var backToTopButton = document.getElementById('back-to-top');
-            
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 100) {
-                    backToTopButton.classList.add('visible');
-                } else {
-                    backToTopButton.classList.remove('visible');
-                }
-            });
-            
-            backToTopButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
+        </div>
+        <!-- Bouton retour en haut de page -->
+        <a href="#" class="back-to-top" id="back-to-top" aria-label="Retour en haut">↑</a>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var backToTopButton = document.getElementById('back-to-top');
+                
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 100) {
+                        backToTopButton.classList.add('visible');
+                    } else {
+                        backToTopButton.classList.remove('visible');
+                    }
+                });
+                
+                backToTopButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
                 });
             });
-        });
-    </script>
+        </script>
+    </main>
 </body>
+
 </html>
