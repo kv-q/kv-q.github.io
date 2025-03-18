@@ -1,75 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sonnet 18 - Portfolio Web de Kenji</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <main class="container">
-        <a href="index.html" class="home-link">Retour à l'accueil</a>
-        
-        <header>
-            <a name="haut"></a><h1>sonnet 18</h1>
-            <h2>by William Shakespeare (1564-1616)</h2>
-        </header>
-        
-        <article class="poem-container">
-            <p class="poem">
-                Shall I compare thee to a summer's day?<br>
-                Thou art more lovely and more temperate:<br>
-                Rough winds do shake the darling buds of May,<br>
-                And summer's lease hath all too short a date:<br>
-                Sometime too hot the eye of heaven shines,<br>
-                And often is his gold complexion dimm'd;<br>
-                And every fair from fair sometime declines,<br>
-                By chance, or nature's changing course, untrimm'd;<br>
-                But thy eternal summer shall not fade<br>
-                Nor lose possession of that fair thou ow'st;<br>
-                Nor shall Death brag thou wander'st in his shade,<br>
-                When in eternal lines to time thou grow'st;<br>
-                So long as men can breathe or eyes can see,<br>
-                So long lives this, and this gives life to thee.
-            </p>
-        </article>
-        
-        <figure class="image">
-            <img src="https://byronsmuse.files.wordpress.com/2015/05/1870s-the-sensitive-plant-study-sir-frank-dicksee-english-pre-raphaelite-painter.jpg" 
-                 alt="Summer Landscape" 
-                 loading="lazy">
-            <figcaption>Scène d'été préraphaélite de Sir Frank Dicksee</figcaption>
-        </figure>
-        
-        <footer class="source">
-            <p>Source: <a href="https://byronsmuse.wordpress.com/2015/05/23/william-shakespeare-sonnet-xviii/" target="_blank" rel="noopener">Byron's Muse</a></p>
-            <a href="#haut">Retour en haut</a>
-        </footer>
+      <a href="index.html" class="home-link">Retour à l'accueil</a>
+
+      <header>
+        <a name="haut"></a>
+        <h1>sonnet 18</h1>
+        <h2>by William Shakespeare (1564-1616)</h2>
+      </header>
+
+      <article class="poem-container">
+        <p class="poem">
+          Shall I compare thee to a summer's day?<br />
+          Thou art more lovely and more temperate:<br />
+          Rough winds do shake the darling buds of May,<br />
+          And summer's lease hath all too short a date:<br />
+          Sometime too hot the eye of heaven shines,<br />
+          And often is his gold complexion dimm'd;<br />
+          And every fair from fair sometime declines,<br />
+          By chance, or nature's changing course, untrimm'd;<br />
+          But thy eternal summer shall not fade<br />
+          Nor lose possession of that fair thou ow'st;<br />
+          Nor shall Death brag thou wander'st in his shade,<br />
+          When in eternal lines to time thou grow'st;<br />
+          So long as men can breathe or eyes can see,<br />
+          So long lives this, and this gives life to thee.
+        </p>
+      </article>
+
+      <figure class="image">
+        <img
+          src="https://byronsmuse.files.wordpress.com/2015/05/1870s-the-sensitive-plant-study-sir-frank-dicksee-english-pre-raphaelite-painter.jpg"
+          alt="Summer Landscape"
+          loading="lazy"
+        />
+        <figcaption>Scène d'été préraphaélite de Sir Frank Dicksee</figcaption>
+      </figure>
+
+      <footer class="source">
+        <p>
+          Source:
+          <a
+            href="https://byronsmuse.wordpress.com/2015/05/23/william-shakespeare-sonnet-xviii/"
+            target="_blank"
+            rel="noopener"
+            >Byron's Muse</a
+          >
+        </p>
+        <a href="#haut">Retour en haut</a>
+      </footer>
     </main>
-     
+
     <!-- Bouton retour en haut de page -->
-    <a href="#" class="back-to-top" id="back-to-top" aria-label="Retour en haut">↑</a>
-    
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Retour en haut"
+      >↑</a
+    >
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var backToTopButton = document.getElementById('back-to-top');
-            
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 100) {
-                    backToTopButton.classList.add('visible');
-                } else {
-                    backToTopButton.classList.remove('visible');
-                }
-            });
-            
-            backToTopButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        });
+      document.addEventListener('DOMContentLoaded', function() {
+          var backToTopButton = document.getElementById('back-to-top');
+
+          window.addEventListener('scroll', function() {
+              if (window.pageYOffset > 100) {
+                  backToTopButton.classList.add('visible');
+              } else {
+                  backToTopButton.classList.remove('visible');
+              }
+          });
+
+          backToTopButton.addEventListener('click', function(e) {
+              e.preventDefault();
+              window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+              });
+          });
+      });
     </script>
-</body>
+  </body>
 </html>
