@@ -367,3 +367,79 @@ footer {
         font-size: 1.1em;
     }
 }
+/* Bibliographie page specific styles */
+.bibliographie-page {
+    background-color: #f7f7f7; /* Lighter background color for the Bibliographie page */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft);
+}
+
+.bibliographie-page h1 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.bibliographie-page h2 {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.bibliographie-page .home-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--link-color);
+    font-size: 1.1em;
+}
+
+.bibliographie-page .poem-container {
+    margin-bottom: 25px;
+}
+
+.bibliographie-page .poem {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+}
+
+.bibliographie-page .image {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.bibliographie-page .image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow-image);
+    transition: var(--transition-default);
+}
+
+.bibliographie-page .image img:hover {
+    transform: scale(1.05);
+}
+
+.bibliographie-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.bibliographie-page th, .bibliographie-page td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.bibliographie-page footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1em;
+    color: var(--secondary-color);
+}
+
