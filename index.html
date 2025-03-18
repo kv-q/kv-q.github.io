@@ -1,144 +1,153 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil - Portfolio Web de Kenji</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        /* Styles spécifiques à la page d'accueil */
-        .hero {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
-        
-        .hero p {
-            font-size: 1.2em;
-            color: var(--secondary-color);
-            max-width: 100%;
-            margin: 0 auto 30px;
-        }
-        
-        .nav-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin: 30px auto;
-            max-width: 900px;
-        }
-        
-        .nav-card {
-            background: var(--container-background);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-soft);
-            transition: var(--transition-default);
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .nav-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-        }
-        
-        .card-image {
-            height: 160px;
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .card-content {
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .card-content h2 {
-            color: var(--primary-color);
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-style: normal;
-            font-weight: bold;
-        }
-        
-        .card-content p {
-            margin: 0;
-            color: var(--secondary-color);
-        }
-        
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            color: var(--secondary-color);
-            font-size: 0.9em;
-        }
-        
-        /* Containers spécifiques à la page d'accueil */
-        .container-home {
-            max-width: 900px;
-            width: 100%;
-            margin: auto;
-            background: var(--container-background);
-            padding: 35px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-soft);
-            transition: var(--transition-default);
-        }
-        
-        @media (max-width: 768px) {
-            .nav-cards {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-            }
-        }
-        
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .nav-cards {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 600px;
-            }
-        }
+      /* style pour page d'acceuil seulement */
+      .hero {
+          text-align: center;
+          margin-bottom: 40px;
+      }
+
+      .hero h1 {
+          font-size: 2.5em;
+          margin-bottom: 15px;
+      }
+
+      .hero p {
+          font-size: 1.2em;
+          color: var(--secondary-color);
+          max-width: 100%;
+          margin: 0 auto 30px;
+      }
+
+      .nav-cards {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 25px;
+          margin: 30px auto;
+          max-width: 900px;
+      }
+
+      .nav-card {
+          background: var(--container-background);
+          border-radius: var(--border-radius);
+          overflow: hidden;
+          box-shadow: var(--shadow-soft);
+          transition: var(--transition-default);
+          text-decoration: none;
+          color: inherit;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .nav-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+      }
+
+      .card-image {
+          height: 160px;
+          background-size: cover;
+          background-position: center;
+      }
+
+      .card-content {
+          padding: 20px;
+          text-align: center;
+      }
+
+      .card-content h2 {
+          color: var(--primary-color);
+          margin-top: 0;
+          margin-bottom: 10px;
+          font-style: normal;
+          font-weight: bold;
+      }
+
+      .card-content p {
+          margin: 0;
+          color: var(--secondary-color);
+      }
+
+      footer {
+          margin-top: 50px;
+          text-align: center;
+          color: var(--secondary-color);
+          font-size: 0.9em;
+      }
+
+      /* contenant poeme, bio, et voyage spécifiques à la page d'accueil */
+      .container-home {
+          max-width: 900px;
+          width: 100%;
+          margin: auto;
+          background: var(--container-background);
+          padding: 35px;
+          border-radius: var(--border-radius);
+          box-shadow: var(--shadow-soft);
+          transition: var(--transition-default);
+      }
+
+      @media (max-width: 768px) {
+          .nav-cards {
+              grid-template-columns: 1fr;
+              max-width: 400px;
+          }
+      }
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+          .nav-cards {
+              grid-template-columns: repeat(2, 1fr);
+              max-width: 600px;
+          }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <main class="container-home">
-        <header class="hero">
-            <h1><i>"bienvenue"</i></h1>
-            <p>site web sommatif soumis à Mme Barbieri.</p>
-        </header>
-        
-        <div class="nav-cards">
-            <a href="poeme.html" class="nav-card">
-                <div class="card-image" style="background-image: url('https://media.istockphoto.com/id/155170343/photo/black-and-white-photo-of-bowman-lake.jpg?s=612x612&w=0&k=20&c=q51Jh9GuFs2x24aaPtYN9OOzFiTpq2TIkFyUcrGz4XU=');"></div>
-                <div class="card-content">
-                    <h2>poème</h2>
-                    <p>sonnet numéro 18</p>
-                </div>
-            </a>
-            
-            <a href="biographie.html" class="nav-card">
-                <div class="card-image" style="background-image: url('https://media.istockphoto.com/id/183343097/photo/old-books-in-a-second-hand-store.jpg?s=612x612&w=0&k=20&c=Jwa1K9_3PtwmNRbTunaOxH4igGk2NSoRONFWGbA-HDk=');"></div>
-                <div class="card-content">
-                    <h2>biographie</h2>
-                    <p>à propos de moi</p>
-                </div>
-            </a>
-            
-            <a href="voyage.html" class="nav-card">
-                <div class="card-image" style="background-image: url('https://static01.nyt.com/images/2016/09/25/magazine/25essay1/25mag-25essay-t_CA0-videoSixteenByNineJumbo1600.jpg');"></div>
-                <div class="card-content">
-                    <h2>voyage</h2>
-                    <p>mon voyage idéal</p>
-                </div>
-            </a>
-        </div>
+      <header class="hero">
+        <h1><i>"bienvenue"</i></h1>
+        <p>je fais parfois du travail</p>
+      </header>
+
+      <div class="nav-cards">
+        <a href="poeme.html" class="nav-card">
+          <div
+            class="card-image"
+            style="background-image: url('https://media.istockphoto.com/id/155170343/photo/black-and-white-photo-of-bowman-lake.jpg?s=612x612&w=0&k=20&c=q51Jh9GuFs2x24aaPtYN9OOzFiTpq2TIkFyUcrGz4XU=');"
+          ></div>
+          <div class="card-content">
+            <h2>poème</h2>
+            <p>sonnet numéro 18</p>
+          </div>
+        </a>
+
+        <a href="biographie.html" class="nav-card">
+          <div
+            class="card-image"
+            style="background-image: url('https://media.istockphoto.com/id/183343097/photo/old-books-in-a-second-hand-store.jpg?s=612x612&w=0&k=20&c=Jwa1K9_3PtwmNRbTunaOxH4igGk2NSoRONFWGbA-HDk=');"
+          ></div>
+          <div class="card-content">
+            <h2>biographie</h2>
+            <p>à propos de moi</p>
+          </div>
+        </a>
+
+        <a href="voyage.html" class="nav-card">
+          <div
+            class="card-image"
+            style="background-image: url('https://static01.nyt.com/images/2016/09/25/magazine/25essay1/25mag-25essay-t_CA0-videoSixteenByNineJumbo1600.jpg');"
+          ></div>
+          <div class="card-content">
+            <h2>voyage</h2>
+            <p>mon voyage idéal</p>
+          </div>
+        </a>
+      </div>
     </main>
-</body>
+  </body>
 </html>
