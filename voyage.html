@@ -1,6 +1,114 @@
 <!DOCTYPE html>
-<html>
-  <body>
-      <p>page1</p>
-  </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Voyage Idéal - Japon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <a href="index.html" class="home-link">Retour à l'accueil</a>
+        
+        <header>
+            <h1>mon voyage idéal au japon</h1>
+            <p>découvrir mes racines et la culture japonaise</p>
+        </header>
+        
+        <section class="section">
+            <h2>pourquoi le japon?</h2>
+            <p>étant d'origine japonaise, le japon représente pour moi un retour aux sources et une opportunité de découvrir mon héritage culturel. c'est un pays qui mélange parfaitement tradition et modernité, offrant une expérience unique à chaque visiteur.</p>
+            
+            <figure class="image">
+                <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=1000" alt="Vue de Tokyo avec le Mont Fuji en arrière-plan" loading="lazy">
+                <figcaption>Vue de Tokyo avec le Mont Fuji en arrière-plan</figcaption>
+            </figure>
+        </section>
+        
+        <section class="section">
+            <h2>sites incontournables</h2>
+            <div class="list-container">
+                <ul class="travel-list">
+                    <li>
+                        <strong>tokyo</strong> - la capitale vibrante avec ses quartiers uniques comme shibuya, shinjuku et akihabara
+                    </li>
+                    <li>
+                        <strong>kyoto</strong> - l'ancienne capitale impériale avec ses temples et jardins historiques
+                    </li>
+                    <li>
+                        <strong>osaka</strong> - connue pour sa délicieuse cuisine de rue et son ambiance décontractée
+                    </li>
+                    <li>
+                        <strong>mont fuji</strong> - l'emblème du japon et un site sacré pour les japonais
+                    </li>
+                    <li>
+                        <strong>hiroshima</strong> - pour comprendre l'histoire et visiter le mémorial de la paix
+                    </li>
+                </ul>
+            </div>
+            
+            <figure class="image">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=1000" alt="Temple à Kyoto" loading="lazy">
+                <figcaption>Temple traditionnel à Kyoto</figcaption>
+            </figure>
+        </section>
+        
+        <section class="section">
+            <h2>cuisine japonaise à découvrir</h2>
+            <div class="list-container">
+                <ul class="food-list">
+                    <li>
+                        <strong>ramen</strong> - nouilles dans un bouillon savoureux avec différentes garnitures
+                    </li>
+                    <li>
+                        <strong>sushi et sashimi</strong> - poisson frais et riz vinaigré, une expérience culinaire essentielle
+                    </li>
+                    <li>
+                        <strong>okonomiyaki</strong> - une sorte de crêpe japonaise avec divers ingrédients
+                    </li>
+                    <li>
+                        <strong>takoyaki</strong> - boulettes de pâte farcies au poulpe, spécialité d'osaka
+                    </li>
+                    <li>
+                        <strong>matcha</strong> - thé vert en poudre utilisé dans diverses boissons et desserts
+                    </li>
+                </ul>
+            </div>
+            
+            <figure class="image">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1000" alt="Assortiment de sushi" loading="lazy">
+                <figcaption>Assortiment de sushi traditionnel</figcaption>
+            </figure>
+        </section>
+        
+        <section class="section">
+            <h2>expériences à vivre</h2>
+            <p>séjourner dans un ryokan traditionnel, participer à une cérémonie du thé, visiter les onsen (sources thermales), assister à un festival matsuri et explorer les quartiers animés de tokyo la nuit.</p>
+            
+            <figure class="image">
+                <img src="https://images.unsplash.com/photo-1578469645742-46cae010e5d4?q=80&w=1000" alt="Ryokan traditionnel" loading="lazy">
+                <figcaption>Ryokan traditionnel avec vue sur un jardin japonais</figcaption>
+            </figure>
+        </section>
+        
+        <footer class="source">
+            <p>un voyage que j'espère réaliser bientôt...</p>
+            <a href="#" class="back-to-top" id="back-to-top">Retour en haut</a>
+        </footer>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var backToTopButton = document.getElementById('back-to-top');
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
