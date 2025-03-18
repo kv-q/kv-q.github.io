@@ -5,56 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonnet 18 - Shakespeare</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .home-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: var(--link-color);
-            text-decoration: none;
-            font-size: 0.9em;
-            transition: var(--transition-default);
-            display: flex;
-            align-items: center;
-            width: fit-content;
-        }
-        
-        .home-link:before {
-            content: "←";
-            margin-right: 8px;
-            font-size: 1.1em;
-        }
-        
-        .home-link:hover {
-            color: var(--link-hover-color);
-            transform: translateX(-3px);
-        }
-         /* Style pour le bouton de retour en haut */
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #333;
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            font-size: 20px;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s;
-            text-decoration: none;
-            z-index: 1000;
-        }
-        
-        .back-to-top.visible {
-            opacity: 0.7;
-        }
-        
-        .back-to-top:hover {
-            
-    </style>
 </head>
 <body>
     <main class="container">
@@ -100,13 +50,10 @@
     <!-- Bouton retour en haut de page -->
     <a href="#" class="back-to-top" id="back-to-top" aria-label="Retour en haut">↑</a>
     
-    <!-- Script pour le bouton de retour en haut -->
     <script>
-        // Fonction pour gérer le bouton de retour en haut
         document.addEventListener('DOMContentLoaded', function() {
             var backToTopButton = document.getElementById('back-to-top');
             
-            // Afficher le bouton quand on scrolle
             window.addEventListener('scroll', function() {
                 if (window.pageYOffset > 100) {
                     backToTopButton.classList.add('visible');
@@ -115,7 +62,6 @@
                 }
             });
             
-            // Scroll vers le haut quand on clique sur le bouton
             backToTopButton.addEventListener('click', function(e) {
                 e.preventDefault();
                 window.scrollTo({
