@@ -1,1 +1,453 @@
+/* Variables pour la cohérence du thème */
+:root {
+  --primary-color: #243119;
+  --secondary-color: #666;
+  --background-color: #cacbd2;
+  --container-background: white;
+  --link-color: #5b5d6a;
+  --link-hover-color: #e74c3c;
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-image: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --border-radius: 12px;
+  --transition-default: all 0.3s ease;
+  --font-primary: "Georgia", serif;
+}
 
+
+/*styles de bases */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--background-color);
+  color: #2c3e50;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*styles des contianers */
+.container,
+.container-home {
+  max-width: 650px;
+  margin: auto;
+  background: var(--container-background);
+  padding: 35px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-default);
+}
+
+.container:hover,
+.container-home:hover {
+  transform: translateY(-2px);
+}
+
+.container-home {
+  max-width: 900px;
+}
+
+/* hierarchie de la typographie basée sur https://www.toptal.com/designers/typography/typographic-hierarchy*/
+h1 {
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  font-size: 1.25em;
+  color: var(--secondary-color);
+  margin-bottom: 1.5em;
+  font-style: italic;
+  font-weight: normal;
+}
+
+/*syles des liens (DOES NOT WORK FOR BIBLIO) */
+.home-link {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: var(--transition-default);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.home-link:before {
+  content: "←";
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+.home-link:hover {
+  color: var(--link-hover-color);
+  transform: translateX(-3px);
+}
+
+/* poeme */
+.poem-container {
+  margin-bottom: 30px;
+}
+
+.poem {
+  font-size: 1.1em;
+  line-height: 1.75;
+  white-space: pre-line;
+  text-align: left;
+  margin: 0;
+}
+
+/* Image  */
+.image {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-image);
+  transition: var(--transition-default);
+}
+
+.image img:hover {
+  transform: scale(1.02);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: var(--secondary-color);
+  font-size: 0.9em;
+}
+
+/* styles des section  */
+.section {
+  margin: 25px 0;
+}
+
+/*style de tableau*/
+.list-container {
+  margin-bottom: 20px;
+}
+
+.travel-list,
+.food-list {
+  padding-left: 20px;
+}
+
+.travel-list li,
+.food-list li {
+  margin-bottom: 10px;
+}
+
+/* style du probile */
+.profile-img {
+  width: 120px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+/*menu*/
+.menu {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.menu a {
+  margin: 0 10px;
+  color: var(--link-color);
+}
+
+.links {
+  margin: 15px 0;
+}
+
+.links a {
+  display: block;
+  margin: 5px 0;
+  color: var(--link-color);
+}
+
+/* tables style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/*  navaigation */
+.nav-menu {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.nav-menu a {
+  margin: 0 10px;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* retour en haut boutton basée sur https://stackoverflow.com/questions/32102747/how-to-make-a-back-to-top-button-using-css-and-html-only */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  text-decoration: none;
+  z-index: 1000;
+  display: inline-block;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+}
+
+/* biblio sourdes */
+.source {
+  font-size: 0.9em;
+  color: var(--secondary-color);
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.source a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-default);
+}
+
+.source a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* "bienvenue"*/
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: var(--secondary-color);
+  max-width: 100%;
+  margin: 0 auto 30px;
+}
+
+.nav-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.nav-card {
+  background: var(--container-background);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-default);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.card-content p {
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 0.9em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container,
+  .container-home {
+    padding: 25px;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 1.75em;
+  }
+
+  .poem {
+    font-size: 1em;
+  }
+
+  .nav-cards {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .container-home {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+}
+/* page de bibliographie */
+.bibliographie-page {
+  background-color: #f7f7f7; 
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.bibliographie-page h1 {
+  font-size: 2.2em;
+  color: #2c3e50;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.bibliographie-page h2 {
+  font-size: 1.2em;
+  color: var(--primary-color);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.bibliographie-page .home-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--link-color);
+  font-size: 1.1em;
+}
+
+.bibliographie-page .poem-container {
+  margin-bottom: 25px;
+}
+
+.bibliographie-page .poem {
+  font-size: 1.2em;
+  line-height: 1.8;
+  text-align: justify;
+  margin: 0;
+}
+
+.bibliographie-page .image {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.bibliographie-page .image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow-image);
+  transition: var(--transition-default);
+}
+
+.bibliographie-page .image img:hover {
+  transform: scale(1.05);
+}
+
+.bibliographie-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.bibliographie-page th,
+.bibliographie-page td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.bibliographie-page footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1em;
+  color: var(--secondary-color);
+}
