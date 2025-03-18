@@ -93,13 +93,25 @@
         
         <footer class="source">
             <p>un voyage que j'espère réaliser bientôt...</p>
-            <a href="#" class="back-to-top" id="back-to-top">Retour en haut</a>
+      
         </footer>
     </main>
+    
+     
+    <!-- Bouton retour en haut de page -->
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Retour en haut">↑</a>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 100) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
             
             backToTopButton.addEventListener('click', function(e) {
                 e.preventDefault();
