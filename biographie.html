@@ -1,96 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biographie - Portfolio Web de Kenji</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+          <!-- animation du texte -->
+    <style>
+      .typing-container {
+        display: inline-block;
+        position: relative;
+      }
+
+      .typing-cursor {
+        display: inline-block;
+        width: 2px;
+        background-color: currentColor;
+        margin-left: 2px;
+        height: 1em;
+        vertical-align: middle;
+        opacity: 0;
+      }
+
+      .typing-cursor.visible {
+        opacity: 1;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+
+        0%,
+        100% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <main class="container">
-        <a href="index.html" class="home-link">Retour à l'accueil</a>
-        
-        <header>
-            <img src="https://preview.redd.it/smbvn2koav291.png?auto=webp&s=b376f056c3841048c41d40150339e96839d898f4" alt="Photo de Kenji" class="profile-img">
-            <h1>kenji avila</h1>
-            <p>étudiant à l'École Secondaire Catholique Paul-Desmarais</p>
-            <p>Pseudo: kv-q</p>
-        </header>
-        
-        <!-- Navigation interne -->
-        <div class="nav-menu">
-            <a href="#a-propos">à propos</a>
-            <a href="#liens">liens préférés</a>
-            <a href="#competences">compétences</a>
-            <a href="voyage.html">mon voyage parfait</a>
-            <a href="bibliographie.html">sources</a>
+      <a href="index.html" class="home-link">Retour à l'accueil</a>
+      <header>
+        <img src="https://preview.redd.it/smbvn2koav291.png?auto=webp&s=b376f056c3841048c41d40150339e96839d898f4" alt="skibidi" class="profile-img">
+              <!-- animation du texte -->
+        <h1>salut, <span id="animated-name" class="typing-container"></span>
+          <span class="typing-cursor"></span>
+        </h1>
+        <p>étudiant à l'École Secondaire Catholique Paul-Desmarais</p>
+        <p>Pseudo: kv-q</p>
+      </header>
+      <!-- Navigation interne -->
+      <div class="nav-menu">
+        <a href="#a-propos">à propos</a>
+        <a href="#liens">liens préférés</a>
+        <a href="#competences">compétences</a>
+        <a href="voyage.html">mon voyage parfait</a>
+        <a href="bibliographie.html">sources</a>
+      </div>
+      <section id="a-propos" class="section">
+        <h2>À propos de moi</h2>
+        <p>je suis passionné par la programmation web et la création de sites internet. j'aime apprendre de nouvelles technologies et développer mes compétences en informatique.</p>
+      </section>
+      <section id="liens" class="section">
+        <h2>Mes liens préférés</h2>
+        <div class="links">
+          <a href="https://monkeytype.com/" target="_blank">monkeytype</a>
+          <a href="https://photogradient.com/" target="_blank">photo gradient</a>
+          <a href="https://www.youtube.com" target="_blank">youtube</a>
+          <a href="https://classroom.google.com/u/0/h" target="_blank">classroom</a>
         </div>
-        
-        <section id="a-propos" class="section">
-            <h2>À propos de moi</h2>
-            <p>je suis passionné par la programmation web et la création de sites internet. j'aime apprendre de nouvelles technologies et développer mes compétences en informatique.</p>
-        </section>
-        
-        <section id="liens" class="section">
-            <h2>Mes liens préférés</h2>
-            <div class="links">
-                <a href="https://monkeytype.com/" target="_blank">monkeytype</a>
-                <a href="https://photogradient.com/" target="_blank">photo gradient</a>
-                <a href="https://www.youtube.com" target="_blank">youtube</a>
-                <a href="https://classroom.google.com/u/0/h" target="_blank">classroom</a>
-            </div>
-        </section>
-        
-        <section id="competences" class="section">
-            <h2>Mes compétences techniques</h2>
-            <table>
-                <tr>
-                    <th>technologie</th>
-                    <th>niveau</th>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                    <td>débutant</td>
-                </tr>
-                <tr>
-                    <td>CSS</td>
-                    <td>compétent</td>
-                </tr>
-                <tr>
-                    <td>JavaScript</td>
-                    <td>débutant</td>
-                </tr>
-                <tr>
-                    <td>Python</td>
-                    <td>compétent</td>
-                </tr>
-            </table>
-        </section>
+      </section>
+      <section id="competences" class="section">
+        <h2>Mes compétences techniques</h2>
+        <table>
+          <tr>
+            <th>technologie</th>
+            <th>niveau</th>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td>débutant</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>compétent</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>débutant</td>
+          </tr>
+          <tr>
+            <td>Python</td>
+            <td>compétent</td>
+          </tr>
+        </table>
+      </section>
     </main>
-    
     <!-- Bouton retour en haut de page -->
     <a href="#" class="back-to-top" id="back-to-top" aria-label="Retour en haut">↑</a>
-    
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var backToTopButton = document.getElementById('back-to-top');
-            
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 100) {
-                    backToTopButton.classList.add('visible');
-                } else {
-                    backToTopButton.classList.remove('visible');
-                }
-            });
-            
-            backToTopButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
+      document.addEventListener('DOMContentLoaded', function() {
+        var backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 100) {
+            backToTopButton.classList.add('visible');
+          } else {
+            backToTopButton.classList.remove('visible');
+          }
         });
+        backToTopButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      });
     </script>
-</body>
+              <!-- animation du texte -->
+    <script>
+      function typeName() {
+        const text = " je suis kenji avila";
+        const element = document.getElementById('animated-name');
+        const cursor = document.querySelector('.typing-cursor');
+        let index = 0;
+        cursor.style.opacity = '1';
+
+        function type() {
+          if (index < text.length) {
+            element.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 100);
+          } else {
+            cursor.classList.add('visible');
+          }
+        }
+        type();
+      }
+      // https://www.w3schools.com/howto/howto_js_typewriter.asp
+      window.addEventListener('load', typeName);
+    </script>
+  </body>
 </html>
